@@ -15,3 +15,10 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+require('cypress-xpath');
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // ignore ResizeObserver errors
+  if (err.message.includes('ResizeObserver loop')) {
+    return false;
+  }
+});

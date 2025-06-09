@@ -1,0 +1,16 @@
+{
+    "dataDeparture": {
+        "searchDeparture": "Jakarta",
+        "airportDeparture": "Soekarno-Hatta International Airport",
+        "displayCityDep": "Jakarta",
+        "cityDeparture": "Jakarta (CGK)"
+    },
+    "dataArrival": {
+        "searchArrival": "Singapura",
+        "airportArrival":"Changi Airport",
+        "displayCityArr":"Singapore, Singapore",
+        "cityArrival": "Singapore (SIN)"
+    },
+    "selectAirlines": "Malaysia Airlines"
+  
+}

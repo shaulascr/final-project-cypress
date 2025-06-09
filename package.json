@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "cypress": "^14.4.1"
+  "devDependencies": {
+    "cypress": "^14.4.0",
+    "cypress-xpath": "^2.0.1"
   }
 }
