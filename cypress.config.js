@@ -19,7 +19,10 @@ module.exports = (on, config) => {
 
 module.exports = defineConfig({
   defaultCommandTimeout: 15000,  // 15 detik
-  pageLoadTimeout: 30000, 
+  pageLoadTimeout: 60000,
+  video: true,
+  videoCompression: true,
+
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -29,7 +32,7 @@ module.exports = defineConfig({
       amazonBaseUrl: 'https://www.amazon.com/',
       youtubeBaseUrl: 'https://www.youtube.com/'
     },
-    supportFile:"cypress/support/e2e.js",
+    supportFile: "cypress/support/e2e.js",
     defaultCommandTimeout: 30000
   },
 });

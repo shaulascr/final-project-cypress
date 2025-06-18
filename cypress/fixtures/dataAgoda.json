@@ -11,6 +11,24 @@
         "displayCityArr":"Singapore, Singapore",
         "cityArrival": "Singapore (SIN)"
     },
-    "selectAirlines": "Malaysia Airlines"
-  
+    "selectAirlines": "Malaysia Airlines",
+    "dataContact": {
+        "firstNameContact":"Budi",
+        "lastNameContact": "Budi",
+        "emailContact": "budi@gmail.com",
+        "phoneNumContact":"082255448822"
+    },
+    "dataPassenger":{
+        "namePsgr": "Budiawan",
+        "lastNamePsgr": "Budi",
+        "genderPsgr": "Male",
+        "dayBrthDatePsgr": "13",
+        "monthBrthDatePsgr": "December",
+        "yearBrthDatePsgr": "1999",
+        "passportNumPsgr": 222353252,
+        "nationalityPsgr": "Indonesia",
+        "dayPassportExpPsgr": "24",
+        "monthPassportExpPsgr": "December",
+        "yearPassportExpPsgr": "2028"
+    }
 }

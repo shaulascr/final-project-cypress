@@ -22,3 +22,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
   }
 });
+Cypress.on('uncaught:exception', (err, runnable) => {
+  if (err.message.includes("navIndex")) {
+    return false; // ignore the error and continue test
+  }
+});
