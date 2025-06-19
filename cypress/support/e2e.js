@@ -16,11 +16,20 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 require('cypress-xpath');
+import 'cypress-mochawesome-reporter/register';
 Cypress.on('uncaught:exception', (err, runnable) => {
   // ignore ResizeObserver errors
   if (err.message.includes('ResizeObserver loop')) {
     return false;
   }
+});
+Cypress.on('test:after:run', (test, runnable) => {
+  if (test.state === 'failed') {
+    const screenshot = `assets/images/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;
+    addContext({ test }, screenshot);
+  }
+  const video = `assets/videos/${Cypress.spec.name}.mp4`;
+  addContext({ test }, video);
 });
 // Cypress.on('uncaught:exception', (err, runnable) => {
 //   if (err.message.includes("navIndex")) {

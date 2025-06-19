@@ -24,9 +24,24 @@ module.exports = defineConfig({
   videoCompression: true,
   waitForAnimations: false,
   animationDistanceThreshold: 50,
-
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'custom-title',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+    mochawesomeReporterOptions: {
+      reportDir: 'cypress/reports/mocha',
+      quite: true,
+      overwrite: false,
+      html: true,
+      json: true,
+    }
+  },
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
     env: {
