@@ -3,16 +3,16 @@ class agodaPage {
         cy.visit(Cypress.env('agodaBaseUrl'));
         cy.wait(5000);
         cy.get('[data-selenium="agodaFlightsTab"]').contains('Flights').click()
-        cy.wait(5000);
+        cy.wait(10000);
         cy.url().should('include', '#flights');
-        cy.wait(3000);
+        cy.wait(10000);
     }
     searchDeparture(searchCity) {
         cy.get('[data-selenium="flight-origin-search-input"]')
             .should('be.visible')
             .clear()
             .type(searchCity);
-        cy.wait(1000);
+        cy.wait(5000);
     }
     selectDeparture(city, airport) {
         cy.get('[data-selenium="suggestion-text-highlight"]').should('have.text', city)

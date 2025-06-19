@@ -22,6 +22,8 @@ module.exports = defineConfig({
   pageLoadTimeout: 60000,
   video: true,
   videoCompression: true,
+  waitForAnimations: false,
+  animationDistanceThreshold: 50,
 
   e2e: {
     setupNodeEvents(on, config) {

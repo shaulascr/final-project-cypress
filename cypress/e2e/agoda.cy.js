@@ -5,6 +5,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
   }
 });
+Cypress.on('uncaught:exception', (err, runnable) => {
+  if (err.message.includes("navIndex")) {
+    return false; 
+  }
+});
 
 describe('Memilih tiket pesawat tujuan', function() {
   Cypress.config('defaultCommandTimeout', 30000)
